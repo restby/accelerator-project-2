@@ -25,8 +25,6 @@
     flex-direction: column;
     padding: 0;
   }
-
-  @include vp-767 {}
 }
 
 .contacts__col {
@@ -107,8 +105,6 @@
   line-height: 24px;
   font-weight: 400;
 
-  @include vp-1439 {}
-
   @include vp-767 {
     max-width: none;
     font-size: 14px;
@@ -166,55 +162,6 @@
     }
   }
 
-  &--phone {
-    &::before {
-
-      mask-image: url("../__spritemap#sprite-icon-phone-view");
-      mask-size: 23.64px 23.64px;
-
-      @include vp-1439 {
-        mask-size: 21.82px 21.82px;
-      }
-
-      @include vp-767 {
-        mask-size: 20px 20px;
-      }
-    }
-
-  }
-
-  &--email {
-    &::before {
-      mask-image: url("../__spritemap#sprite-icon-mail-view");
-      mask-size: 23.64px 16.55px;
-
-      @include vp-1439 {
-        mask-size: 21.82px 15.27px;
-      }
-
-      @include vp-767 {
-        mask-size: 20px 14px;
-      }
-    }
-
-  }
-
-  &--address {
-    &::before {
-      mask-image: url("../__spritemap#sprite-icon-pin-view");
-      mask-size: 17.73px 23.64px;
-
-      @include vp-1439 {
-        mask-size: 16.36px 21.82px;
-      }
-
-      @include vp-767 {
-        mask-size: 15px 20px;
-      }
-    }
-
-  }
-
   @include vp-1439 {
     padding-left: 34px;
     row-gap: 6px;
@@ -223,6 +170,51 @@
   @include vp-767 {
     padding-left: 32px;
     row-gap: 8px;
+  }
+}
+
+.contacts__item--phone {
+  &::before {
+    mask-image: url("../__spritemap#sprite-icon-phone-view");
+    mask-size: 23.64px 23.64px;
+
+    @include vp-1439 {
+      mask-size: 21.82px 21.82px;
+    }
+
+    @include vp-767 {
+      mask-size: 20px 20px;
+    }
+  }
+}
+
+.contacts__item--email {
+  &::before {
+    mask-image: url("../__spritemap#sprite-icon-mail-view");
+    mask-size: 23.64px 16.55px;
+
+    @include vp-1439 {
+      mask-size: 21.82px 15.27px;
+    }
+
+    @include vp-767 {
+      mask-size: 20px 14px;
+    }
+  }
+}
+
+.contacts__item--address {
+  &::before {
+    mask-image: url("../__spritemap#sprite-icon-pin-view");
+    mask-size: 17.73px 23.64px;
+
+    @include vp-1439 {
+      mask-size: 16.36px 21.82px;
+    }
+
+    @include vp-767 {
+      mask-size: 15px 20px;
+    }
   }
 }
 
@@ -262,15 +254,9 @@
 .contacts__item a {
   text-decoration: none;
   color: inherit;
-  transition:
-    color $trans-default;
-
-  &:focus {
-    outline: none;
-  }
+  transition: color $trans-default;
 
   &:focus-visible {
-    outline: none;
     color: $color-action;
   }
 
@@ -283,7 +269,7 @@
   }
 }
 
-.contacts__item a.disabled {
+.contacts__item .disabled {
   color: #999999;
   pointer-events: none;
 }

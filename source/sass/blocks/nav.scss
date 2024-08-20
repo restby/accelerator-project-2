@@ -110,7 +110,7 @@
   }
 }
 
-.nav__list a.disabled {
+.nav__list .disabled {
   color: #999999;
   pointer-events: none;
 }
@@ -156,5 +156,4 @@
     font-size: 0;
     line-height: 0;
   }
-
 }

@@ -1,4 +1,4 @@
-const openMenu = () => {
+const initOpenMenu = () => {
   if (document.querySelector('[data-element="menu"]') && document.querySelector('[data-element="menu-btn"]')) {
     const menu = document.querySelector('[data-element="menu"]');
     const menuBtn = document.querySelector('[data-element="menu-btn"]');
@@ -51,10 +51,10 @@ const openMenu = () => {
       }
     });
 
-    menuItems.forEach(item => {
+    menuItems.forEach((item) => {
       item.addEventListener('click', closeMenu);
     });
   }
 };
 
-export { openMenu };
+export { initOpenMenu };

@@ -1,73 +1,73 @@
 .about {
   position: relative;
   overflow: hidden;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 100px;
-    left: 0;
-    width: 660px;
-    height: 498px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 100%;
+.about::after {
+  position: absolute;
+  content: "";
+  top: 100px;
+  left: 0;
+  width: 660px;
+  height: 498px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
 
-    @supports (background-image: url(image.webp)) {
-      background-image: url("../../img/about/about-desktop.webp");
+  @supports (background-image: url("image.webp")) {
+    background-image: url("../../img/about/about-desktop.webp");
+  }
+
+  background-image: url("../../img/about/about-desktop.png");
+
+  @media (resolution >= 2dppx) {
+    @supports (background-image: url("image.webp")) {
+      background-image: url("../../img/about/about-desktop@2x.webp");
     }
 
-    background-image: url("../../img/about/about-desktop.png");
+    background-image: url("../../img/about/about-desktop@2x.png");
+  }
 
-    @media (resolution >=2dppx) {
-      @supports (background-image: url(image.webp)) {
-        background-image: url("../../img/about/about-desktop@2x.webp");
-      }
+  @include vp-1439 {
+    z-index: -1;
+    width: 542px;
+    height: 350px;
+    top: 174px;
 
-      background-image: url("../../img/about/about-desktop@2x.png");
+    @supports (background-image: url("image.webp")) {
+      background-image: url("../../img/about/about-tablet.webp");
     }
 
-    @include vp-1439 {
-      z-index: -1;
-      width: 542px;
-      height: 350px;
-      top: 174px;
+    background-image: url("../../img/about/about-tablet.png");
 
-      @supports (background-image: url(image.webp)) {
-        background-image: url("../../img/about/about-tablet.webp");
+    @media (resolution >= 2dppx) {
+      @supports (background-image: url("image.webp")) {
+        background-image: url("../../img/about/about-tablet@2x.webp");
       }
 
-      background-image: url("../../img/about/about-tablet.png");
+      background-image: url("../../img/about/about-tablet@2x.png");
+    }
+  }
 
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
-          background-image: url("../../img/about/about-tablet@2x.webp");
-        }
+  @include vp-767 {
+    width: 434px;
+    height: 400px;
+    top: 20px;
+    background-size: contain;
+    background-position: 0 0;
 
-        background-image: url("../../img/about/about-tablet@2x.png");
-      }
+    @supports (background-image: url("image.webp")) {
+      background-image: url("../../img/about/about-mobile.webp");
     }
 
-    @include vp-767 {
-      width: 434px;
-      height: 400px;
-      top: 20px;
-      background-size: contain;
-      background-position: 0 0;
+    background-image: url("../../img/about/about-mobile.png");
 
-      @supports (background-image: url(image.webp)) {
-        background-image: url("../../img/about/about-mobile.webp");
+    @media (resolution >= 2dppx) {
+      @supports (background-image: url("image.webp")) {
+        background-image: url("../../img/about/about-mobile@2x.webp");
       }
 
-      background-image: url("../../img/about/about-mobile.png");
-
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
-          background-image: url("../../img/about/about-mobile@2x.webp");
-        }
-
-        background-image: url("../../img/about/about-mobile@2x.png");
-      }
+      background-image: url("../../img/about/about-mobile@2x.png");
     }
   }
 }
@@ -235,9 +235,3 @@
     display: none;
   }
 }
-
-.about__mission {}
-
-.about__mission {}
-
-.about__mission {}

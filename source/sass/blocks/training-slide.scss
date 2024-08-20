@@ -55,12 +55,7 @@
   border: 1px solid rgba($color-dark, 0.3);
   transition: background-color $trans-default, border-color $trans-default, color $trans-default;
 
-  &:focus {
-    outline: none;
-  }
-
   &:focus-visible {
-    outline: none;
     background-color: $color-transparent;
     color: $color-dark;
     border-color: $color-transparent;
@@ -79,7 +74,7 @@
   }
 }
 
-.training-slide__content a.disabled {
+.training-slide__content .disabled {
   pointer-events: none;
   color: #2d383f;
   background-color: $color-transparent;

@@ -3,57 +3,6 @@
   padding-bottom: 66px;
   position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    z-index: -1;
-    bottom: -166px;
-    left: 0;
-    width: 1440px;
-    height: 447px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 100%;
-
-    @supports (background-image: url(image.webp)) {
-      background-image: url("../../img/backgrounds/clouds-3-desktop.webp");
-    }
-
-    background-image: url("../../img/backgrounds/clouds-3-desktop.jpg");
-
-    @media (resolution >=2dppx) {
-      @supports (background-image: url(image.webp)) {
-        background-image: url("../../img/backgrounds/clouds-3-desktop@2x.webp");
-      }
-
-      background-image: url("../../img/backgrounds/clouds-3-desktop@2x.jpg");
-    }
-
-    @include vp-1439 {
-      width: 768px;
-      height: 996px;
-      bottom: -1162px;
-
-      @supports (background-image: url(image.webp)) {
-        background-image: url("../../img/backgrounds/clouds-3-tablet.webp");
-      }
-
-      background-image: url("../../img/backgrounds/clouds-3-tablet.jpg");
-
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
-          background-image: url("../../img/backgrounds/clouds-3-tablet@2x.webp");
-        }
-
-        background-image: url("../../img/backgrounds/clouds-3-tablet@2x.jpg");
-      }
-    }
-
-    @include vp-767 {
-      display: none;
-    }
-  }
-
   @include vp-1439 {
     padding-top: 60px;
     padding-bottom: 12px;
@@ -62,6 +11,57 @@
   @include vp-767 {
     padding-top: 37px;
     padding-bottom: 9px;
+  }
+}
+
+.reviews::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  bottom: -166px;
+  left: 0;
+  width: 1440px;
+  height: 447px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+
+  @supports (background-image: url("image.webp")) {
+    background-image: url("../../img/backgrounds/clouds-3-desktop.webp");
+  }
+
+  background-image: url("../../img/backgrounds/clouds-3-desktop.jpg");
+
+  @media (resolution >= 2dppx) {
+    @supports (background-image: url("image.webp")) {
+      background-image: url("../../img/backgrounds/clouds-3-desktop@2x.webp");
+    }
+
+    background-image: url("../../img/backgrounds/clouds-3-desktop@2x.jpg");
+  }
+
+  @include vp-1439 {
+    width: 768px;
+    height: 996px;
+    bottom: -1162px;
+
+    @supports (background-image: url("image.webp")) {
+      background-image: url("../../img/backgrounds/clouds-3-tablet.webp");
+    }
+
+    background-image: url("../../img/backgrounds/clouds-3-tablet.jpg");
+
+    @media (resolution >= 2dppx) {
+      @supports (background-image: url("image.webp")) {
+        background-image: url("../../img/backgrounds/clouds-3-tablet@2x.webp");
+      }
+
+      background-image: url("../../img/backgrounds/clouds-3-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
 

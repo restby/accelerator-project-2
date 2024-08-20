@@ -83,8 +83,6 @@
   }
 }
 
-.page-footer__nav-list {}
-
 .page-footer__col--phone a {
   font-size: 18px;
   line-height: 18px;
@@ -105,15 +103,9 @@
 
 .page-footer__col--phone a,
 .page-footer__col--policy a {
-  transition:
-    color $trans-default;
-
-  &:focus {
-    outline: none;
-  }
+  transition: color $trans-default;
 
   &:focus-visible {
-    outline: none;
     color: $color-action;
   }
 
@@ -126,12 +118,8 @@
   }
 }
 
-.page-footer__col--phone a.disabled,
-.page-footer__col--policy a.disabled {
+.page-footer__col--phone .disabled,
+.page-footer__col--policy .disabled {
   color: #999999;
   pointer-events: none;
 }
-
-.page-footer__social-list {}
-
-.page-footer__policy {}

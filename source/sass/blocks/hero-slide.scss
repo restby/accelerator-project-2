@@ -22,14 +22,14 @@
   }
 
   &:nth-child(1) {
-    @supports (background-image: url(image.webp)) {
+    @supports (background-image: url("image.webp")) {
       background-image: url("../../img/hero/item-1-desktop.webp");
     }
 
     background-image: url("../../img/hero/item-1-desktop.jpg");
 
-    @media (resolution >=2dppx) {
-      @supports (background-image: url(image.webp)) {
+    @media (resolution >= 2dppx) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-1-desktop@2x.webp");
       }
 
@@ -37,14 +37,14 @@
     }
 
     @include vp-1439 {
-      @supports (background-image: url(image.webp)) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-1-tablet.webp");
       }
 
       background-image: url("../../img/hero/item-1-tablet.jpg");
 
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
+      @media (resolution >= 2dppx) {
+        @supports (background-image: url("image.webp")) {
           background-image: url("../../img/hero/item-1-tablet@2x.webp");
         }
 
@@ -53,14 +53,14 @@
     }
 
     @include vp-767 {
-      @supports (background-image: url(image.webp)) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-1-mobile.webp");
       }
 
       background-image: url("../../img/hero/item-1-mobile.jpg");
 
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
+      @media (resolution >= 2dppx) {
+        @supports (background-image: url("image.webp")) {
           background-image: url("../../img/hero/item-1-mobile@2x.webp");
         }
 
@@ -70,14 +70,14 @@
   }
 
   &:nth-child(2) {
-    @supports (background-image: url(image.webp)) {
+    @supports (background-image: url("image.webp")) {
       background-image: url("../../img/hero/item-2-desktop.webp");
     }
 
     background-image: url("../../img/hero/item-2-desktop.jpg");
 
-    @media (resolution >=2dppx) {
-      @supports (background-image: url(image.webp)) {
+    @media (resolution >= 2dppx) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-2-desktop@2x.webp");
       }
 
@@ -85,14 +85,14 @@
     }
 
     @include vp-1439 {
-      @supports (background-image: url(image.webp)) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-2-tablet.webp");
       }
 
       background-image: url("../../img/hero/item-2-tablet.jpg");
 
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
+      @media (resolution >= 2dppx) {
+        @supports (background-image: url("image.webp")) {
           background-image: url("../../img/hero/item-2-tablet@2x.webp");
         }
 
@@ -101,14 +101,14 @@
     }
 
     @include vp-767 {
-      @supports (background-image: url(image.webp)) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-2-mobile.webp");
       }
 
       background-image: url("../../img/hero/item-2-mobile.jpg");
 
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
+      @media (resolution >= 2dppx) {
+        @supports (background-image: url("image.webp")) {
           background-image: url("../../img/hero/item-2-mobile@2x.webp");
         }
 
@@ -118,14 +118,14 @@
   }
 
   &:nth-child(3) {
-    @supports (background-image: url(image.webp)) {
+    @supports (background-image: url("image.webp")) {
       background-image: url("../../img/hero/item-3-desktop.webp");
     }
 
     background-image: url("../../img/hero/item-3-desktop.jpg");
 
-    @media (resolution >=2dppx) {
-      @supports (background-image: url(image.webp)) {
+    @media (resolution >= 2dppx) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-3-desktop@2x.webp");
       }
 
@@ -133,14 +133,14 @@
     }
 
     @include vp-1439 {
-      @supports (background-image: url(image.webp)) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-3-tablet.webp");
       }
 
       background-image: url("../../img/hero/item-3-tablet.jpg");
 
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
+      @media (resolution >= 2dppx) {
+        @supports (background-image: url("image.webp")) {
           background-image: url("../../img/hero/item-3-tablet@2x.webp");
         }
 
@@ -149,14 +149,14 @@
     }
 
     @include vp-767 {
-      @supports (background-image: url(image.webp)) {
+      @supports (background-image: url("image.webp")) {
         background-image: url("../../img/hero/item-3-mobile.webp");
       }
 
       background-image: url("../../img/hero/item-3-mobile.jpg");
 
-      @media (resolution >=2dppx) {
-        @supports (background-image: url(image.webp)) {
+      @media (resolution >= 2dppx) {
+        @supports (background-image: url("image.webp")) {
           background-image: url("../../img/hero/item-3-mobile@2x.webp");
         }
 
@@ -188,7 +188,6 @@
     align-items: center;
     flex-direction: column;
   }
-
 }
 
 .hero-slide__content {

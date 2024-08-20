@@ -63,8 +63,9 @@ const validateForm = () => {
     });
 
     inputs.forEach((input) => {
+      const label = input.previousElementSibling;
+
       input.addEventListener('focus', () => {
-        const label = input.previousElementSibling;
         if (label && label.tagName.toLowerCase() === 'label') {
           label.style.display = 'none';
         }
@@ -72,7 +73,6 @@ const validateForm = () => {
       });
 
       input.addEventListener('blur', () => {
-        const label = input.previousElementSibling;
         if (label && label.tagName.toLowerCase() === 'label') {
           if (input.value.trim() === '') {
             label.style.display = 'block';
@@ -85,7 +85,6 @@ const validateForm = () => {
       });
 
       input.addEventListener('input', () => {
-        const label = input.previousElementSibling;
         if (label && label.tagName.toLowerCase() === 'label') {
           if (input.value.trim() !== '') {
             label.style.display = 'none';
@@ -95,7 +94,6 @@ const validateForm = () => {
         }
       });
 
-      const label = input.previousElementSibling;
       if (label && label.tagName.toLowerCase() === 'label') {
         if (input.value.trim() !== '') {
           label.style.display = 'none';
