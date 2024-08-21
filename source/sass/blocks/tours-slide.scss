@@ -47,19 +47,19 @@
       max-width: 290px;
     }
   }
+}
 
-  & > picture img {
-    max-width: 380px;
-    z-index: 2;
-    object-fit: cover;
+.tours-slide > picture img {
+  max-width: 380px;
+  z-index: 2;
+  object-fit: cover;
 
-    @include vp-1439 {
-      max-width: 330px;
-    }
+  @include vp-1439 {
+    max-width: 330px;
+  }
 
-    @include vp-767 {
-      max-width: 290px;
-    }
+  @include vp-767 {
+    max-width: 290px;
   }
 }
 

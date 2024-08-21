@@ -45,20 +45,6 @@
     }
   }
 
-  & > picture img {
-    max-width: 1440px;
-    z-index: 2;
-    object-fit: cover;
-
-    @include vp-1439 {
-      max-width: 768px;
-    }
-
-    @include vp-767 {
-      max-width: 320px;
-    }
-  }
-
   @include vp-1439 {
     padding-top: 342px;
     min-height: 1034px;
@@ -71,6 +57,20 @@
   @include vp-767 {
     padding-top: 144px;
     min-height: 568px;
+  }
+}
+
+.hero-slide > picture img {
+  max-width: 1440px;
+  z-index: 2;
+  object-fit: cover;
+
+  @include vp-1439 {
+    max-width: 768px;
+  }
+
+  @include vp-767 {
+    max-width: 320px;
   }
 }
 
