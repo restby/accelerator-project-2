@@ -1,5 +1,6 @@
 .reviews-slide.swiper-slide {
   width: 720px;
+  height: auto;
 
   @include vp-1439 {
     width: 595px;

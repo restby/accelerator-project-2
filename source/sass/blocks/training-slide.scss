@@ -11,6 +11,10 @@
   height: auto;
 }
 
+.reviews-slide__container {
+  height: calc(100% - 20px);
+}
+
 .training-slide__img {
   font-size: 0;
   line-height: 0;
