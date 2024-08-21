@@ -1,12 +1,8 @@
 .hero-slide {
   padding-top: 200px;
   padding-bottom: 80px;
-  background-color: #5f83ae;
   min-height: 800px;
   color: $color-white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 100% 100%;
   position: relative;
 
   &::before {
@@ -14,156 +10,208 @@
     content: "";
     width: 100%;
     height: 100%;
+    max-width: 1440px;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: $hero-gradient;
-  }
-
-  &:nth-child(1) {
-    @supports (background-image: url("image.webp")) {
-      background-image: url("../../img/hero/item-1-desktop.webp");
-    }
-
-    background-image: url("../../img/hero/item-1-desktop.jpg");
-
-    @media (resolution >= 2dppx) {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-1-desktop@2x.webp");
-      }
-
-      background-image: url("../../img/hero/item-1-desktop@2x.jpg");
-    }
+    z-index: 3;
 
     @include vp-1439 {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-1-tablet.webp");
-      }
-
-      background-image: url("../../img/hero/item-1-tablet.jpg");
-
-      @media (resolution >= 2dppx) {
-        @supports (background-image: url("image.webp")) {
-          background-image: url("../../img/hero/item-1-tablet@2x.webp");
-        }
-
-        background-image: url("../../img/hero/item-1-tablet@2x.jpg");
-      }
+      max-width: 768px;
     }
 
     @include vp-767 {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-1-mobile.webp");
-      }
-
-      background-image: url("../../img/hero/item-1-mobile.jpg");
-
-      @media (resolution >= 2dppx) {
-        @supports (background-image: url("image.webp")) {
-          background-image: url("../../img/hero/item-1-mobile@2x.webp");
-        }
-
-        background-image: url("../../img/hero/item-1-mobile@2x.jpg");
-      }
+      max-width: 320px;
     }
   }
 
-  &:nth-child(2) {
-    @supports (background-image: url("image.webp")) {
-      background-image: url("../../img/hero/item-2-desktop.webp");
-    }
-
-    background-image: url("../../img/hero/item-2-desktop.jpg");
-
-    @media (resolution >= 2dppx) {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-2-desktop@2x.webp");
-      }
-
-      background-image: url("../../img/hero/item-2-desktop@2x.jpg");
-    }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5f83ae;
+    z-index: 1;
 
     @include vp-1439 {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-2-tablet.webp");
-      }
-
-      background-image: url("../../img/hero/item-2-tablet.jpg");
-
-      @media (resolution >= 2dppx) {
-        @supports (background-image: url("image.webp")) {
-          background-image: url("../../img/hero/item-2-tablet@2x.webp");
-        }
-
-        background-image: url("../../img/hero/item-2-tablet@2x.jpg");
-      }
+      max-width: 768px;
     }
 
     @include vp-767 {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-2-mobile.webp");
-      }
-
-      background-image: url("../../img/hero/item-2-mobile.jpg");
-
-      @media (resolution >= 2dppx) {
-        @supports (background-image: url("image.webp")) {
-          background-image: url("../../img/hero/item-2-mobile@2x.webp");
-        }
-
-        background-image: url("../../img/hero/item-2-mobile@2x.jpg");
-      }
+      max-width: 320px;
     }
   }
 
-  &:nth-child(3) {
-    @supports (background-image: url("image.webp")) {
-      background-image: url("../../img/hero/item-3-desktop.webp");
-    }
-
-    background-image: url("../../img/hero/item-3-desktop.jpg");
-
-    @media (resolution >= 2dppx) {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-3-desktop@2x.webp");
-      }
-
-      background-image: url("../../img/hero/item-3-desktop@2x.jpg");
-    }
+  & > picture img {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    object-fit: cover;
 
     @include vp-1439 {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-3-tablet.webp");
-      }
-
-      background-image: url("../../img/hero/item-3-tablet.jpg");
-
-      @media (resolution >= 2dppx) {
-        @supports (background-image: url("image.webp")) {
-          background-image: url("../../img/hero/item-3-tablet@2x.webp");
-        }
-
-        background-image: url("../../img/hero/item-3-tablet@2x.jpg");
-      }
+      max-width: 768px;
     }
 
     @include vp-767 {
-      @supports (background-image: url("image.webp")) {
-        background-image: url("../../img/hero/item-3-mobile.webp");
-      }
-
-      background-image: url("../../img/hero/item-3-mobile.jpg");
-
-      @media (resolution >= 2dppx) {
-        @supports (background-image: url("image.webp")) {
-          background-image: url("../../img/hero/item-3-mobile@2x.webp");
-        }
-
-        background-image: url("../../img/hero/item-3-mobile@2x.jpg");
-      }
+      max-width: 320px;
     }
   }
+
+  // &:nth-child(1) {
+  //   @supports (background-image: url("image.webp")) {
+  //     background-image: url("../../img/hero/item-1-desktop.webp");
+  //   }
+
+  //   background-image: url("../../img/hero/item-1-desktop.jpg");
+
+  //   @media (resolution >= 2dppx) {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-1-desktop@2x.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-1-desktop@2x.jpg");
+  //   }
+
+  //   @include vp-1439 {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-1-tablet.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-1-tablet.jpg");
+
+  //     @media (resolution >= 2dppx) {
+  //       @supports (background-image: url("image.webp")) {
+  //         background-image: url("../../img/hero/item-1-tablet@2x.webp");
+  //       }
+
+  //       background-image: url("../../img/hero/item-1-tablet@2x.jpg");
+  //     }
+  //   }
+
+  //   @include vp-767 {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-1-mobile.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-1-mobile.jpg");
+
+  //     @media (resolution >= 2dppx) {
+  //       @supports (background-image: url("image.webp")) {
+  //         background-image: url("../../img/hero/item-1-mobile@2x.webp");
+  //       }
+
+  //       background-image: url("../../img/hero/item-1-mobile@2x.jpg");
+  //     }
+  //   }
+  // }
+
+  // &:nth-child(2) {
+  //   @supports (background-image: url("image.webp")) {
+  //     background-image: url("../../img/hero/item-2-desktop.webp");
+  //   }
+
+  //   background-image: url("../../img/hero/item-2-desktop.jpg");
+
+  //   @media (resolution >= 2dppx) {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-2-desktop@2x.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-2-desktop@2x.jpg");
+  //   }
+
+  //   @include vp-1439 {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-2-tablet.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-2-tablet.jpg");
+
+  //     @media (resolution >= 2dppx) {
+  //       @supports (background-image: url("image.webp")) {
+  //         background-image: url("../../img/hero/item-2-tablet@2x.webp");
+  //       }
+
+  //       background-image: url("../../img/hero/item-2-tablet@2x.jpg");
+  //     }
+  //   }
+
+  //   @include vp-767 {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-2-mobile.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-2-mobile.jpg");
+
+  //     @media (resolution >= 2dppx) {
+  //       @supports (background-image: url("image.webp")) {
+  //         background-image: url("../../img/hero/item-2-mobile@2x.webp");
+  //       }
+
+  //       background-image: url("../../img/hero/item-2-mobile@2x.jpg");
+  //     }
+  //   }
+  // }
+
+  // &:nth-child(3) {
+  //   @supports (background-image: url("image.webp")) {
+  //     background-image: url("../../img/hero/item-3-desktop.webp");
+  //   }
+
+  //   background-image: url("../../img/hero/item-3-desktop.jpg");
+
+  //   @media (resolution >= 2dppx) {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-3-desktop@2x.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-3-desktop@2x.jpg");
+  //   }
+
+  //   @include vp-1439 {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-3-tablet.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-3-tablet.jpg");
+
+  //     @media (resolution >= 2dppx) {
+  //       @supports (background-image: url("image.webp")) {
+  //         background-image: url("../../img/hero/item-3-tablet@2x.webp");
+  //       }
+
+  //       background-image: url("../../img/hero/item-3-tablet@2x.jpg");
+  //     }
+  //   }
+
+  //   @include vp-767 {
+  //     @supports (background-image: url("image.webp")) {
+  //       background-image: url("../../img/hero/item-3-mobile.webp");
+  //     }
+
+  //     background-image: url("../../img/hero/item-3-mobile.jpg");
+
+  //     @media (resolution >= 2dppx) {
+  //       @supports (background-image: url("image.webp")) {
+  //         background-image: url("../../img/hero/item-3-mobile@2x.webp");
+  //       }
+
+  //       background-image: url("../../img/hero/item-3-mobile@2x.jpg");
+  //     }
+  //   }
+  // }
 
   @include vp-1439 {
     padding-top: 342px;
@@ -195,6 +243,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 4;
 
   @include vp-1439 {
     align-items: center;
