@@ -15,6 +15,7 @@ const createAdvSlider = () => {
       spaceBetween: 30,
       initialSlide: 2,
       slidesPerGroup: 2,
+      autoHeight: false,
       navigation: {
         nextEl: '.adv__arrow--next',
         prevEl: '.adv__arrow--prev',
