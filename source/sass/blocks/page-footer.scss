@@ -45,11 +45,13 @@
   }
 
   &--nav {
+    max-width: 700px;
     padding-left: 109px;
     padding-top: 19px;
     margin-right: auto;
 
     @include vp-1439 {
+      max-width: none;
       padding-top: 9px;
       padding-left: 37px;
     }
@@ -61,6 +63,7 @@
   }
 
   &--phone {
+    max-width: 200px;
     padding-top: 20px;
 
     @include vp-1439 {
