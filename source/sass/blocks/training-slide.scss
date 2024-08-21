@@ -8,9 +8,7 @@
 }
 
 .training-slide.swiper-slide {
-  @include vp-1439 {
-    height: auto;
-  }
+  height: auto;
 }
 
 .training-slide__img {

@@ -15,7 +15,6 @@ const initTrainingSlider = () => {
     watchOverflow: true,
     speed: 500,
     loop: false,
-    autoHeight: false,
     navigation: {
       nextEl: '.training__arrow--next',
       prevEl: '.training__arrow--prev',
@@ -25,16 +24,19 @@ const initTrainingSlider = () => {
       320: {
         slidesPerView: 1,
         initialSlide: 2,
+        autoHeight: true,
       },
       768: {
         initialSlide: 0,
         slidesPerView: 3,
         spaceBetween: 20,
         simulateTouch: false,
+        autoHeight: false,
       },
       1440: {
         slidesPerView: 4,
         spaceBetween: 20,
+        autoHeight: false,
       },
     },
   });
