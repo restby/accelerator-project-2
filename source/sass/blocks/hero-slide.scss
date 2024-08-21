@@ -233,7 +233,7 @@
   position: absolute;
   top: 93px;
   right: 0;
-  z-index: 2;
+  z-index: 6;
 
   @include vp-1439 {
     top: 98px;
@@ -244,7 +244,7 @@
   position: absolute;
   top: 0;
   right: 102px;
-  z-index: 1;
+  z-index: 5;
 
   @include vp-1439 {
     right: 176px;

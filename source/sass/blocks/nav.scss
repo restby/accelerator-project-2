@@ -15,10 +15,16 @@
       flex-direction: column;
       column-gap: 0;
       row-gap: 26px;
+      max-width: 678px;
+      position: absolute;
+      flex-wrap: nowrap;
+      padding-bottom: 70px;
     }
 
     @include vp-767 {
       row-gap: 22px;
+      max-width: 290px;
+      padding-bottom: 50px;
     }
   }
 

@@ -15,7 +15,6 @@ const initToursSlider = () => {
     watchOverflow: true,
     speed: 500,
     loop: false,
-    autoHeight: false,
     navigation: {
       nextEl: '.tours__arrow--next',
       prevEl: '.tours__arrow--prev',
@@ -25,15 +24,18 @@ const initToursSlider = () => {
       320: {
         slidesPerView: 1,
         initialSlide: 0,
+        autoHeight: true,
       },
       768: {
         slidesPerView: 2,
         spaceBetween: 18,
         simulateTouch: false,
+        autoHeight: false,
       },
       1440: {
         slidesPerView: 3,
         spaceBetween: 30,
+        autoHeight: false,
       },
     },
   });
