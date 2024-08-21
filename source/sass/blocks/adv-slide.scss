@@ -1,5 +1,6 @@
 .adv-slide.swiper-slide {
   width: 380px;
+  height: auto;
   background-color: $color-white;
 
   @include vp-1439 {
@@ -15,6 +16,7 @@
   position: relative;
   width: 100%;
   min-height: 329px;
+  height: 100%;
   padding-top: 123px;
   padding-bottom: 40px;
   padding-left: 19px;

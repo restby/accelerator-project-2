@@ -8,9 +8,11 @@
 }
 
 .training-slide.swiper-slide {
-  @include vp-1439 {
-    height: auto;
-  }
+  height: auto;
+}
+
+.reviews-slide__container {
+  height: calc(100% - 20px);
 }
 
 .training-slide__img {
