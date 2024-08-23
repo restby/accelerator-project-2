@@ -115,8 +115,6 @@
   @include vp-1439 {
     max-width: none;
     position: absolute;
-
-    // min-height: 226px;
     min-height: 408px;
     top: -1000px;
     left: 0;
@@ -124,16 +122,11 @@
     padding-left: 45px;
     padding-right: 45px;
     padding-top: 50px;
-
-    // padding-bottom: 70px;
     overflow-y: auto;
   }
 
   @include vp-767 {
     padding-top: 30px;
-
-    // padding-bottom: 50px;
-    // min-height: 194px;
     min-height: 359px;
     padding-left: 15px;
     padding-right: 15px;

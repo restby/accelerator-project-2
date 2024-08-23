@@ -45,6 +45,14 @@ const initHeroSlider = () => {
     }, 200);
   };
 
+  const addAriaAttributesToBullets = () => {
+    const bullets = document.querySelectorAll('.hero__slider-bullet');
+    bullets.forEach((bullet, index) => {
+      bullet.setAttribute('role', 'button');
+      bullet.setAttribute('aria-label', `слайд №${index + 1}`);
+    });
+  };
+
   new Swiper(heroSlider, {
     modules: [Pagination],
     watchOverflow: true,
@@ -64,6 +72,7 @@ const initHeroSlider = () => {
     on: {
       init: () => {
         initActiveSlide();
+        addAriaAttributesToBullets();
         isFirstLoad = false;
       },
       slideChange: () => {

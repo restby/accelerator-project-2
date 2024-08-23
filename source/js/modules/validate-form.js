@@ -5,25 +5,33 @@ const validateForm = () => {
     const digitsOnlyRegex = /^\d+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$|^[a-zA-Z0-9._%+-]+@[а-яА-ЯёЁ0-9.-]+\.[рф]{2,3}$/;
 
-    const showError = (input) => {
+    const showError = (input, errorMessage) => {
       const parent = input.parentElement;
+      const errorText = parent.querySelector('.form__error-text');
       parent.classList.add('error');
       input.classList.add('error');
+
+      errorText.textContent = errorMessage;
+      errorText.style.display = 'block';
     };
 
     const hideError = (input) => {
       const parent = input.parentElement;
+      const errorText = parent.querySelector('.form__error-text');
       parent.classList.remove('error');
       input.classList.remove('error');
+
+      errorText.textContent = '';
+      errorText.style.display = 'none';
     };
 
     const validatePhone = (input) => {
       const value = input.value.trim();
 
       if (value === '') {
-        showError(input);
+        showError(input, 'Поле телефон обязательно для заполнения');
       } else if (!digitsOnlyRegex.test(value)) {
-        showError(input);
+        showError(input, 'Поле телефон может содержать только цифры');
       } else {
         hideError(input);
       }
@@ -33,10 +41,10 @@ const validateForm = () => {
       const value = input.value.trim();
 
       if (value === '') {
-        showError(input);
+        showError(input, 'Поле email обязательно для заполнения');
       } else if (!emailRegex.test(value)) {
-        showError(input);
-        input.blur(); // Снимаем фокус с поля email
+        showError(input, 'Некорректный адрес электронной почты');
+        input.blur();
       } else {
         hideError(input);
       }
