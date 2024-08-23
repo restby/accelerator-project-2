@@ -99,6 +99,14 @@
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+
+  @include vp-1439 {
+    max-width: 768px;
+  }
+
+  @include vp-767 {
+    max-width: 320px;
+  }
 }
 
 .gallery__wrapper.swiper-wrapper {

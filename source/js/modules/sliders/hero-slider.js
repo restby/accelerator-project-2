@@ -47,8 +47,8 @@ const initHeroSlider = () => {
 
   new Swiper(heroSlider, {
     modules: [Pagination],
-    grabCursor: false,
     watchOverflow: true,
+    grabCursor: false,
     simulateTouch: false,
     speed: 500,
     loop: true,
@@ -73,6 +73,26 @@ const initHeroSlider = () => {
       slideChangeTransitionStart: () => {
         initActiveSlide();
       },
+    },
+    breakpoints: {
+      320: {
+        pagination: {
+          clickable: false,
+          grabCursor: true,
+          simulateTouch: true,
+        },
+      },
+      768: {
+        pagination: {
+          clickable: false,
+          grabCursor: true,
+          simulateTouch: true,
+        },
+      },
+      1440: {
+        allowTouchMove: false,
+        clickable: true,
+      }
     },
   });
 };

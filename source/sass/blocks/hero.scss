@@ -24,7 +24,8 @@
   }
 }
 
-.hero__slider-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+.hero__slider-pagination.swiper-pagination-clickable.swiper-pagination-bullets,
+.hero__slider-pagination.swiper-pagination-bullets {
   width: 100%;
   max-width: 600px;
   display: flex;

@@ -20,7 +20,7 @@
 
   background-image: url("../../img/about/about-desktop.png");
 
-  @media (resolution >= 2dppx) {
+  @media (resolution >=2dppx) {
     @supports (background-image: url("image.webp")) {
       background-image: url("../../img/about/about-desktop@2x.webp");
     }
@@ -40,7 +40,7 @@
 
     background-image: url("../../img/about/about-tablet.png");
 
-    @media (resolution >= 2dppx) {
+    @media (resolution >=2dppx) {
       @supports (background-image: url("image.webp")) {
         background-image: url("../../img/about/about-tablet@2x.webp");
       }
@@ -50,11 +50,13 @@
   }
 
   @include vp-767 {
-    width: 434px;
+    width: 320px;
     height: 400px;
     top: 20px;
     background-size: contain;
     background-position: 0 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     @supports (background-image: url("image.webp")) {
       background-image: url("../../img/about/about-mobile.webp");
@@ -62,7 +64,7 @@
 
     background-image: url("../../img/about/about-mobile.png");
 
-    @media (resolution >= 2dppx) {
+    @media (resolution >=2dppx) {
       @supports (background-image: url("image.webp")) {
         background-image: url("../../img/about/about-mobile@2x.webp");
       }
@@ -85,12 +87,14 @@
   @include vp-1439 {
     padding-top: 59px;
     padding-bottom: 42px;
+    max-width: 768px;
   }
 
   @include vp-767 {
     justify-content: center;
     padding-top: 436px;
     padding-bottom: 20px;
+    max-width: 320px;
   }
 }
 
