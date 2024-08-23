@@ -45,10 +45,18 @@ const initHeroSlider = () => {
     }, 200);
   };
 
+  const addAriaAttributesToBullets = () => {
+    const bullets = document.querySelectorAll('.hero__slider-bullet');
+    bullets.forEach((bullet, index) => {
+      bullet.setAttribute('role', 'button');
+      bullet.setAttribute('aria-label', `слайд №${index + 1}`);
+    });
+  };
+
   new Swiper(heroSlider, {
     modules: [Pagination],
-    grabCursor: false,
     watchOverflow: true,
+    grabCursor: false,
     simulateTouch: false,
     speed: 500,
     loop: true,
@@ -64,6 +72,7 @@ const initHeroSlider = () => {
     on: {
       init: () => {
         initActiveSlide();
+        addAriaAttributesToBullets();
         isFirstLoad = false;
       },
       slideChange: () => {
@@ -73,6 +82,26 @@ const initHeroSlider = () => {
       slideChangeTransitionStart: () => {
         initActiveSlide();
       },
+    },
+    breakpoints: {
+      320: {
+        pagination: {
+          clickable: false,
+          grabCursor: true,
+          simulateTouch: true,
+        },
+      },
+      768: {
+        pagination: {
+          clickable: false,
+          grabCursor: true,
+          simulateTouch: true,
+        },
+      },
+      1440: {
+        allowTouchMove: false,
+        clickable: true,
+      }
     },
   });
 };

@@ -41,6 +41,7 @@
 
     @include vp-767 {
       width: auto;
+      max-width: 320px;
       padding-left: 15px;
       padding-right: 15px;
     }

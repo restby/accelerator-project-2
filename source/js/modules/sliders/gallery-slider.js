@@ -46,11 +46,7 @@ const initGallerySlider = () => {
       }
     }
   };
-
-  // Initialize slider on load
   initializeSlider();
-
-  // Reinitialize slider on window resize
   mediaQuery.addEventListener('change', initializeSlider);
 };
 

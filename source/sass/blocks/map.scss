@@ -1,7 +1,21 @@
+.map {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include vp-1439 {
+    max-width: 768px;
+  }
+
+  @include vp-767 {
+    max-width: 320px;
+  }
+}
+
 .map__img {
   font-size: 0;
   line-height: 0;
   position: relative;
+  background-color: #bdddc2;
 }
 
 .map__img img {

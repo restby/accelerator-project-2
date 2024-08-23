@@ -1,103 +1,65 @@
 const validateForm = () => {
-  if (document.querySelector('form') && document.querySelector('input[type="tel"]') && document.querySelector('input[type="email"]')) {
-    const form = document.querySelector('form');
+  const form = document.querySelector('form');
+  const phoneInput = document.querySelector('input[type="tel"]');
+  const emailInput = document.querySelector('input[type="email"]');
+
+  if (form && phoneInput && emailInput) {
     const inputs = form.querySelectorAll('input');
     const digitsOnlyRegex = /^\d+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$|^[a-zA-Z0-9._%+-]+@[а-яА-ЯёЁ0-9.-]+\.[рф]{2,3}$/;
 
-    const showError = (input) => {
+    const toggleError = (input, show) => {
       const parent = input.parentElement;
-      parent.classList.add('error');
-      input.classList.add('error');
+      parent.classList.toggle('error', show);
+      input.classList.toggle('error', show);
     };
 
-    const hideError = (input) => {
-      const parent = input.parentElement;
-      parent.classList.remove('error');
-      input.classList.remove('error');
-    };
-
-    const validatePhone = (input) => {
+    const validateInput = (input, regex) => {
       const value = input.value.trim();
-
-      if (value === '') {
-        showError(input);
-      } else if (!digitsOnlyRegex.test(value)) {
-        showError(input);
-      } else {
-        hideError(input);
-      }
-    };
-
-    const validateEmail = (input) => {
-      const value = input.value.trim();
-
-      if (value === '') {
-        showError(input);
-      } else if (!emailRegex.test(value)) {
-        showError(input);
-        input.blur(); // Снимаем фокус с поля email
-      } else {
-        hideError(input);
-      }
+      toggleError(input, value === '' || !regex.test(value));
     };
 
     form.addEventListener('submit', (event) => {
       let isValid = true;
 
       inputs.forEach((input) => {
-        if (input.name === 'phone') {
-          validatePhone(input);
-        } else if (input.name === 'email') {
-          validateEmail(input);
-        }
-
-        if (input.classList.contains('error')) {
+        if (input.value.trim() === '') {
           isValid = false;
+          toggleError(input, true);
+        } else {
+          if (input.name === 'phone') validateInput(input, digitsOnlyRegex);
+          if (input.name === 'email') validateInput(input, emailRegex);
+          if (input.classList.contains('error')) isValid = false;
         }
       });
 
-      if (!isValid) {
-        event.preventDefault();
-      }
+      if (!isValid) event.preventDefault();
     });
 
     inputs.forEach((input) => {
       const label = input.previousElementSibling;
 
       input.addEventListener('focus', () => {
-        if (label && label.tagName.toLowerCase() === 'label') {
-          label.style.display = 'none';
-        }
+        if (label && label.tagName.toLowerCase() === 'label') label.style.display = 'none';
         input.classList.add('show-placeholder');
+        toggleError(input, false);
       });
 
       input.addEventListener('blur', () => {
-        if (label && label.tagName.toLowerCase() === 'label') {
-          if (input.value.trim() === '') {
-            label.style.display = 'block';
-          }
+        if (label && label.tagName.toLowerCase() === 'label' && input.value.trim() === '') {
+          label.style.display = 'block';
         }
         input.classList.remove('show-placeholder');
-        const parent = input.parentElement;
-        parent.classList.remove('error');
-        input.classList.remove('error');
       });
 
       input.addEventListener('input', () => {
         if (label && label.tagName.toLowerCase() === 'label') {
-          if (input.value.trim() !== '') {
-            label.style.display = 'none';
-          } else if (document.activeElement !== input) {
-            label.style.display = 'block';
-          }
+          label.style.display = input.value.trim() === '' && document.activeElement !== input ? 'block' : 'none';
         }
       });
 
-      if (label && label.tagName.toLowerCase() === 'label') {
-        if (input.value.trim() !== '') {
-          label.style.display = 'none';
-        }
+      if (label && label.tagName.toLowerCase() === 'label' && input.value.trim() !== '') {
+        label.style.display = 'none';
       }
     });
   }
