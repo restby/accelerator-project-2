@@ -32,7 +32,7 @@
 
   background-image: url("../../img/backgrounds/clouds-3-desktop.jpg");
 
-  @media (resolution >=2dppx) {
+  @media (resolution >= 2dppx) {
     @supports (background-image: url("image.webp")) {
       background-image: url("../../img/backgrounds/clouds-3-desktop@2x.webp");
     }
@@ -51,7 +51,7 @@
 
     background-image: url("../../img/backgrounds/clouds-3-tablet.jpg");
 
-    @media (resolution >=2dppx) {
+    @media (resolution >= 2dppx) {
       @supports (background-image: url("image.webp")) {
         background-image: url("../../img/backgrounds/clouds-3-tablet@2x.webp");
       }

@@ -20,7 +20,7 @@
 
   background-image: url("../../img/about/about-desktop.png");
 
-  @media (resolution >=2dppx) {
+  @media (resolution >= 2dppx) {
     @supports (background-image: url("image.webp")) {
       background-image: url("../../img/about/about-desktop@2x.webp");
     }
@@ -40,7 +40,7 @@
 
     background-image: url("../../img/about/about-tablet.png");
 
-    @media (resolution >=2dppx) {
+    @media (resolution >= 2dppx) {
       @supports (background-image: url("image.webp")) {
         background-image: url("../../img/about/about-tablet@2x.webp");
       }
@@ -64,7 +64,7 @@
 
     background-image: url("../../img/about/about-mobile.png");
 
-    @media (resolution >=2dppx) {
+    @media (resolution >= 2dppx) {
       @supports (background-image: url("image.webp")) {
         background-image: url("../../img/about/about-mobile@2x.webp");
       }
