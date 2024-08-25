@@ -27,20 +27,30 @@ const validateForm = () => {
           isValid = false;
           toggleError(input, true);
         } else {
-          if (input.name === 'phone') validateInput(input, digitsOnlyRegex);
-          if (input.name === 'email') validateInput(input, emailRegex);
-          if (input.classList.contains('error')) isValid = false;
+          if (input.name === 'phone') {
+            validateInput(input, digitsOnlyRegex);
+          }
+          if (input.name === 'email') {
+            validateInput(input, emailRegex);
+          }
+          if (input.classList.contains('error')) {
+            isValid = false;
+          }
         }
       });
 
-      if (!isValid) event.preventDefault();
+      if (!isValid) {
+        event.preventDefault();
+      }
     });
 
     inputs.forEach((input) => {
       const label = input.previousElementSibling;
 
       input.addEventListener('focus', () => {
-        if (label && label.tagName.toLowerCase() === 'label') label.style.display = 'none';
+        if (label && label.tagName.toLowerCase() === 'label') {
+          label.style.display = 'none';
+        }
         input.classList.add('show-placeholder');
         toggleError(input, false);
       });
